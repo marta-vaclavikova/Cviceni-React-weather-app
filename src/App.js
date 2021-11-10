@@ -13,13 +13,13 @@ const App = () => {
 
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_MY_API_ID}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_MY_API_ID}`)
       .then(response => response.json())
       .then(json => {
         setWeather(json);
       });
 
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.REACT_APP_MY_API_ID}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.REACT_APP_MY_API_ID}`)
       .then(response => response.json())
       .then(json => {
         setForecast(json.list.filter((_, index) => index % 8 === 0));

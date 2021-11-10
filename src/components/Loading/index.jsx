@@ -1,7 +1,8 @@
 import React from "react";
+import './style.css';
 
 const Loading = () => (
-    <h3>Loading...</h3>
+    <h3 className="loading">Loading...</h3>
 );
 
 export default Loading;
